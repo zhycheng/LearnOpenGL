@@ -9,3 +9,4 @@ glfw-3.4/build/.vs/
 *.res
 Code/01TestProject/.vs/
 *.idb
+Code/02TestWindow/.vs/
