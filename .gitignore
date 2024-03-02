@@ -8,3 +8,4 @@ glfw-3.4/build/.vs/
 *.ilk
 *.res
 Code/01TestProject/.vs/
+*.idb
