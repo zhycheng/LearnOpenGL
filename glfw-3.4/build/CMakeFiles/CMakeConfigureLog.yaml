@@ -1,0 +1,292 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.19044 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      适用于 .NET Framework MSBuild 版本 17.7.2+d6990bcfa
+      生成启动时间为 2024/3/2 20:04:57。
+      
+      节点 1 上的项目“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\3.28.3\\CompilerIdC\\CompilerIdC.vcxproj”(默认目标)。
+      PrepareForBuild:
+        正在创建目录“Debug\\”。
+        正在创建目录“Debug\\CompilerIdC.tlog\\”。
+      InitializeBuildStatus:
+        正在创建“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+        正在对“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”执行 Touch 任务。
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\3.28.3\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        正在删除文件“Debug\\CompilerIdC.tlog\\unsuccessfulbuild”。
+        正在对“Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate”执行 Touch 任务。
+      已完成生成项目“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\3.28.3\\CompilerIdC\\CompilerIdC.vcxproj”(默认目标)的操作。
+      
+      已成功生成。
+          0 个警告
+          0 个错误
+      
+      已用时间 00:00:01.16
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/3.28.3/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-6wwms2"
+      binary: "D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-6wwms2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-6wwms2'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_30553.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        适用于 .NET Framework MSBuild 版本 17.7.2+d6990bcfa
+        生成启动时间为 2024/3/2 20:04:58。
+        
+        节点 1 上的项目“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6wwms2\\cmTC_30553.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_30553.dir\\Debug\\”。
+          正在创建目录“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6wwms2\\Debug\\”。
+          正在创建目录“cmTC_30553.dir\\Debug\\cmTC_30553.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_30553.dir\\Debug\\cmTC_30553.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在对“cmTC_30553.dir\\Debug\\cmTC_30553.tlog\\unsuccessfulbuild”执行 Touch 任务。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_30553.dir\\Debug\\\\" /Fd"cmTC_30553.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Dev\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.37.32825 版
+          CMakeCCompilerABI.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_30553.dir\\Debug\\\\" /Fd"cmTC_30553.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Dev\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6wwms2\\Debug\\cmTC_30553.exe" /INCREMENTAL /ILK:"cmTC_30553.dir\\Debug\\cmTC_30553.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-6wwms2/Debug/cmTC_30553.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-6wwms2/Debug/cmTC_30553.lib" /MACHINE:X64  /machine:x64 cmTC_30553.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_30553.vcxproj -> D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6wwms2\\Debug\\cmTC_30553.exe
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_30553.dir\\Debug\\cmTC_30553.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_30553.dir\\Debug\\cmTC_30553.tlog\\cmTC_30553.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6wwms2\\cmTC_30553.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+            0 个警告
+            0 个错误
+        
+        已用时间 00:00:00.66
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "CMakeLists.txt:60 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-2sdogz"
+      binary: "D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-2sdogz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/LearnOpenGL/glfw-3.4/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-2sdogz'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_23d7f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        适用于 .NET Framework MSBuild 版本 17.7.2+d6990bcfa
+        生成启动时间为 2024/3/2 20:04:59。
+        
+        节点 1 上的项目“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2sdogz\\cmTC_23d7f.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_23d7f.dir\\Debug\\”。
+          正在创建目录“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2sdogz\\Debug\\”。
+          正在创建目录“cmTC_23d7f.dir\\Debug\\cmTC_23d7f.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_23d7f.dir\\Debug\\cmTC_23d7f.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在对“cmTC_23d7f.dir\\Debug\\cmTC_23d7f.tlog\\unsuccessfulbuild”执行 Touch 任务。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_23d7f.dir\\Debug\\\\" /Fd"cmTC_23d7f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2sdogz\\src.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.37.32825 版
+          src.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_23d7f.dir\\Debug\\\\" /Fd"cmTC_23d7f.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2sdogz\\src.c"
+        D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2sdogz\\src.c(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2sdogz\\cmTC_23d7f.vcxproj]
+        已完成生成项目“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2sdogz\\cmTC_23d7f.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2sdogz\\cmTC_23d7f.vcxproj”(默认目标) (1) ->
+        (ClCompile 目标) -> 
+          D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2sdogz\\src.c(1,10): fatal  error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2sdogz\\cmTC_23d7f.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.45
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "CMakeLists.txt:60 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-33jo0m"
+      binary: "D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-33jo0m"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/LearnOpenGL/glfw-3.4/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-33jo0m'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9c33b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        适用于 .NET Framework MSBuild 版本 17.7.2+d6990bcfa
+        生成启动时间为 2024/3/2 20:05:00。
+        
+        节点 1 上的项目“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-33jo0m\\cmTC_9c33b.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_9c33b.dir\\Debug\\”。
+          正在创建目录“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-33jo0m\\Debug\\”。
+          正在创建目录“cmTC_9c33b.dir\\Debug\\cmTC_9c33b.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_9c33b.dir\\Debug\\cmTC_9c33b.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在对“cmTC_9c33b.dir\\Debug\\cmTC_9c33b.tlog\\unsuccessfulbuild”执行 Touch 任务。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9c33b.dir\\Debug\\\\" /Fd"cmTC_9c33b.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-33jo0m\\CheckFunctionExists.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.37.32825 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          CheckFunctionExists.c
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9c33b.dir\\Debug\\\\" /Fd"cmTC_9c33b.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-33jo0m\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-33jo0m\\Debug\\cmTC_9c33b.exe" /INCREMENTAL /ILK:"cmTC_9c33b.dir\\Debug\\cmTC_9c33b.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-33jo0m/Debug/cmTC_9c33b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-33jo0m/Debug/cmTC_9c33b.lib" /MACHINE:X64  /machine:x64 cmTC_9c33b.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-33jo0m\\cmTC_9c33b.vcxproj]
+        已完成生成项目“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-33jo0m\\cmTC_9c33b.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-33jo0m\\cmTC_9c33b.vcxproj”(默认目标) (1) ->
+        (Link 目标) -> 
+          LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-33jo0m\\cmTC_9c33b.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.57
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Dev/CMake/share/cmake-3.28/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "CMakeLists.txt:60 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-c22zgs"
+      binary: "D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-c22zgs"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/LearnOpenGL/glfw-3.4/CMake/modules"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-c22zgs'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_43a37.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        适用于 .NET Framework MSBuild 版本 17.7.2+d6990bcfa
+        生成启动时间为 2024/3/2 20:05:00。
+        
+        节点 1 上的项目“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c22zgs\\cmTC_43a37.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_43a37.dir\\Debug\\”。
+          正在创建目录“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c22zgs\\Debug\\”。
+          正在创建目录“cmTC_43a37.dir\\Debug\\cmTC_43a37.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_43a37.dir\\Debug\\cmTC_43a37.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在对“cmTC_43a37.dir\\Debug\\cmTC_43a37.tlog\\unsuccessfulbuild”执行 Touch 任务。
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_43a37.dir\\Debug\\\\" /Fd"cmTC_43a37.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c22zgs\\CheckFunctionExists.c"
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.37.32825 版
+          CheckFunctionExists.c
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_43a37.dir\\Debug\\\\" /Fd"cmTC_43a37.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c22zgs\\CheckFunctionExists.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.37.32822\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c22zgs\\Debug\\cmTC_43a37.exe" /INCREMENTAL /ILK:"cmTC_43a37.dir\\Debug\\cmTC_43a37.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-c22zgs/Debug/cmTC_43a37.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/LearnOpenGL/glfw-3.4/build/CMakeFiles/CMakeScratch/TryCompile-c22zgs/Debug/cmTC_43a37.lib" /MACHINE:X64  /machine:x64 cmTC_43a37.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c22zgs\\cmTC_43a37.vcxproj]
+        已完成生成项目“D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c22zgs\\cmTC_43a37.vcxproj”(默认目标)的操作 - 失败。
+        
+        生成失败。
+        
+        “D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c22zgs\\cmTC_43a37.vcxproj”(默认目标) (1) ->
+        (Link 目标) -> 
+          LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [D:\\LearnOpenGL\\glfw-3.4\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c22zgs\\cmTC_43a37.vcxproj]
+        
+            0 个警告
+            1 个错误
+        
+        已用时间 00:00:00.56
+        
+      exitCode: 1
+...
