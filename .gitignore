@@ -1,0 +1,9 @@
+*.exe
+*.pdb
+*.obj
+*.tlog
+*.log
+glfw-3.4/build/.vs/
+*.recipe
+*.ilk
+*.res
