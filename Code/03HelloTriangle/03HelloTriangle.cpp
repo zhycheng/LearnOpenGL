@@ -16,18 +16,21 @@ void procInput(GLFWwindow* window)
 const char* vertexShaderSource = 
             "#version 330 core\n"
             "layout(location =0) in vec3 aPos;\n"
+            "layout(location = 1) in vec3 aColor;\n"
+            "out vec3 ourColor;\n"
             "void main()\n"
             "{\n"
             "gl_Position=vec4(aPos.x,aPos.y,aPos.z,1.0f);\n"
+            "ourColor=aColor;\n"
             "}\n"
 ;
 const char* fragmentShaderSource =
             "#version 330 core\n"
             "out vec4 FragColor;\n"
-            "uniform vec4 ourColor;\n"
+            "in vec3 ourColor;\n"
             "void main()\n"
             "{\n"
-            "FragColor=ourColor;\n"
+            "FragColor=vec4(ourColor,1.0f);\n"
             "}\n"
 ;
 int main()
@@ -55,9 +58,10 @@ int main()
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     //顶点数据
     float vertices[] = {
-            -0.5f, -0.5f, 0.0f,
-            0.5f, -0.5f, 0.0f,
-            0.0f,  0.5f, 0.0f
+        // 位置              // 颜色
+  0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,   // 右下
+ -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,   // 左下
+  0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f    // 顶部
     };
     //数据进入顶点缓存
     unsigned int VBO,VAO;
@@ -71,8 +75,12 @@ int main()
     
 
     //链接顶点属性
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
+
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3*sizeof(float)));
+    glEnableVertexAttribArray(1);
+
 
 
     glBindVertexArray(0);
@@ -132,10 +140,11 @@ int main()
 
         glUseProgram(shaderProgram);
 
+        /*
         int colorLocation = glGetUniformLocation(shaderProgram, "ourColor");
         float time = glfwGetTime();
         float greenValue = (sin(time)+1.0f)/2;
-        glUniform4f(colorLocation,0.0f, greenValue,0.0f,1.0f);
+        glUniform4f(colorLocation,0.0f, greenValue,0.0f,1.0f);*/
 
        
 
