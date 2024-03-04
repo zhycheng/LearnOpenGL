@@ -1,6 +1,7 @@
 ﻿#include<glad/glad.h>
 #include<GLFW/glfw3.h>
 #include <iostream>
+#include <math.h>
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
@@ -23,9 +24,10 @@ const char* vertexShaderSource =
 const char* fragmentShaderSource =
             "#version 330 core\n"
             "out vec4 FragColor;\n"
+            "uniform vec4 ourColor;\n"
             "void main()\n"
             "{\n"
-            "FragColor=vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+            "FragColor=ourColor;\n"
             "}\n"
 ;
 int main()
@@ -116,6 +118,10 @@ int main()
     glDeleteShader(vertexShader);
     glDeleteShader(fragShader);
 
+
+    
+
+
     while (!glfwWindowShouldClose(window))
     {
         procInput(window);
@@ -125,14 +131,28 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(shaderProgram);
+
+        int colorLocation = glGetUniformLocation(shaderProgram, "ourColor");
+        float time = glfwGetTime();
+        float greenValue = (sin(time)+1.0f)/2;
+        glUniform4f(colorLocation,0.0f, greenValue,0.0f,1.0f);
+
+       
+
+
+        
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);
         glBindVertexArray(0);
 
 
+
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
+    glDeleteProgram(shaderProgram);
     glfwTerminate();
     return 0;
 }
