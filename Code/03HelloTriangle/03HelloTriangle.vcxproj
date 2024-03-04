@@ -135,6 +135,13 @@
     <ClCompile Include="..\..\libraries\cpp\glad.c" />
     <ClCompile Include="03HelloTriangle.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Shader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader.fs" />
+    <None Include="Shader.vs" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
