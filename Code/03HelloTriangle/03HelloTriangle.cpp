@@ -181,13 +181,22 @@ int main()
         sh.setFloat("factor", s);
 
         mat4 trans = mat4(1.0f);
-        trans = translate(trans, vec3(0.2f, 0, 0));
+        trans = translate(trans, vec3(0.5f, 0, 0));
         trans = rotate(trans, (float)glfwGetTime()*0.1f, vec3(0, 0, 1.0f));
+        trans = scale(trans, vec3(0.5f,0.5f,0.5f));
         unsigned int translateDoc = glGetUniformLocation(sh.ID,"transform");
         glUniformMatrix4fv(translateDoc, 1, GL_FALSE, value_ptr(trans));
         float time = glfwGetTime();
         sh.setFloat("time", time);
         //glDrawArrays(GL_TRIANGLES, 0, 3);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+         trans = mat4(1.0f);
+         float changeValue = (float)glfwGetTime() * 0.1f;
+        trans = translate(trans, vec3(-0.5f, 0, 0));
+        trans = rotate(trans, changeValue, vec3(0, 0, 1.0f));
+        float scaleValue = abs(sin(changeValue) * 0.5f);
+        trans = scale(trans, vec3(scaleValue, scaleValue, scaleValue));
+        glUniformMatrix4fv(translateDoc, 1, GL_FALSE, value_ptr(trans));
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
 
