@@ -176,9 +176,13 @@ int main()
 
         mat4 projection = mat4(1.0f);
         projection = perspective(radians(45.0f), (float)(SCR_WIDTH / SCR_HEIGHT), 0.1f, 100.0f);
-
         mat4 view = mat4(1.0f);
-        view = translate(view, vec3(0.0f,0.0f,-3.0f));
+        float R = 10.0f;
+        float x = sin(glfwGetTime()) * R;
+        float z = cos(glfwGetTime()) * R;
+
+        view = glm::lookAt(vec3(x, 0, z), vec3(0, 0, 0), vec3(0, 1.0f, 0));
+        //view = translate(view, vec3(0.0f,0.0f,-3.0f));
         sh.setMat4("view", view);
         sh.setMat4("projection", projection);
 
