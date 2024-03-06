@@ -164,6 +164,9 @@ int main()
         glBindTexture(GL_TEXTURE_2D, texture2);
         glBindVertexArray(VAO);
         sh.setFloat("factor", s);
+
+        float time = glfwGetTime();
+        sh.setFloat("time", time);
         //glDrawArrays(GL_TRIANGLES, 0, 3);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
