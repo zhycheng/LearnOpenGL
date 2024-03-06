@@ -4,6 +4,8 @@
 #include <math.h>
 #include "Shader.h"
 #include "stb_image.h"
+float s = 0;
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
@@ -13,6 +15,26 @@ void procInput(GLFWwindow* window)
     if (glfwGetKey(window, GLFW_KEY_C) == GLFW_PRESS)
     {
         glfwSetWindowShouldClose(window, true);
+    }
+    else if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
+    {
+        s += 0.001f;
+        if (s > 1)
+        {
+            s = 1.0f;
+        }
+        std::cout<<"ket up clicked" << std::endl;
+
+    }
+    else if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
+    {
+        
+        s -= 0.001f;
+        if (s < 0)
+        {
+            s = 0;
+        }
+        std::cout << "ket down clicked" << std::endl;
     }
 }
 int main()
@@ -87,9 +109,6 @@ int main()
     glGenTextures(1,&texture1);
     glBindTexture(GL_TEXTURE_2D,texture1);
 
-
-
-
     stbi_set_flip_vertically_on_load(true);
     int width, height, nrChannels;
     unsigned char* data = stbi_load("brag.jpg", &width, &height, &nrChannels, 0);
@@ -144,6 +163,7 @@ int main()
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture2);
         glBindVertexArray(VAO);
+        sh.setFloat("factor", s);
         //glDrawArrays(GL_TRIANGLES, 0, 3);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
