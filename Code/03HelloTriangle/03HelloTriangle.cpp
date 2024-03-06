@@ -39,20 +39,27 @@ int main()
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     //顶点数据
     float vertices[] = {
-        // 位置              // 颜色
-  0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,   // 右下
- -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,   // 左下
-  0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f    // 顶部
+    0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,    // 右上
+     0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   // 右下
+    -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,  // 左下
+    -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,    // 左上
+    };
+
+    unsigned int indices[] = {
+    0, 1, 3, // first triangle
+    1, 2, 3  // second triangle
     };
     //数据进入顶点缓存
-    unsigned int VBO,VAO;
+    unsigned int VBO,VAO,EBO;
     glGenBuffers(1,&VBO);
     glGenVertexArrays(1,&VAO);
+    glGenBuffers(1, &EBO);
     glBindVertexArray(VAO);
 
     glBindBuffer(GL_ARRAY_BUFFER,VBO);
-    
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER,sizeof(indices), indices,GL_STATIC_DRAW);
     
 
     //链接顶点属性
@@ -95,7 +102,8 @@ int main()
 
         
         glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+        //glDrawArrays(GL_TRIANGLES, 0, 3);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
 
 
