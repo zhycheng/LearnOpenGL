@@ -6,6 +6,7 @@ uniform sampler2D texture1;
 uniform sampler2D texture2;
 uniform float factor;
 uniform float time;
+
 void main()
 {
 	FragColor=mix(texture(texture1,TexCoord),texture(texture2,TexCoord),abs(cos(time)*0.5f));

@@ -9,6 +9,10 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+
+using namespace std;
+using namespace glm;
+
 float s = 0;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
@@ -39,7 +43,7 @@ void procInput(GLFWwindow* window)
         {
             s = 0;
         }
-        std::cout << "ket down clicked" << std::endl;
+        std::cout << "key down clicked" << std::endl;
     }
 }
 int main()
@@ -145,6 +149,12 @@ int main()
     sh.use();
     sh.setInt("texture1", 0);
     sh.setInt("texture2", 1);
+
+ 
+    
+
+
+
     while (!glfwWindowShouldClose(window))
     {
         procInput(window);
@@ -170,6 +180,11 @@ int main()
         glBindVertexArray(VAO);
         sh.setFloat("factor", s);
 
+        mat4 trans = mat4(1.0f);
+        trans = translate(trans, vec3(0.2f, 0, 0));
+        trans = rotate(trans, (float)glfwGetTime()*0.1f, vec3(0, 0, 1.0f));
+        unsigned int translateDoc = glGetUniformLocation(sh.ID,"transform");
+        glUniformMatrix4fv(translateDoc, 1, GL_FALSE, value_ptr(trans));
         float time = glfwGetTime();
         sh.setFloat("time", time);
         //glDrawArrays(GL_TRIANGLES, 0, 3);
