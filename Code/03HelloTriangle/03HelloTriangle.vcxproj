@@ -134,9 +134,11 @@
   <ItemGroup>
     <ClCompile Include="..\..\libraries\cpp\glad.c" />
     <ClCompile Include="03HelloTriangle.cpp" />
+    <ClCompile Include="stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shader.fs" />
