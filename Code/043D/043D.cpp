@@ -150,6 +150,19 @@ int main()
     sh.use();
     sh.setInt("texture1", 0);
 
+    glm::vec3 cubePositions[] = {
+          glm::vec3(0.0f,  0.0f,  0.0f),
+          glm::vec3(2.0f,  5.0f, -15.0f),
+          glm::vec3(-1.5f, -2.2f, -2.5f),
+          glm::vec3(-3.8f, -2.0f, -12.3f),
+          glm::vec3(2.4f, -0.4f, -3.5f),
+          glm::vec3(-1.7f,  3.0f, -7.5f),
+          glm::vec3(1.3f, -2.0f, -2.5f),
+          glm::vec3(1.5f,  2.0f, -2.5f),
+          glm::vec3(1.5f,  0.2f, -1.5f),
+          glm::vec3(-1.3f,  1.0f, -1.5f)
+    };
+
     while (!glfwWindowShouldClose(window))
     {
         procInput(window);
@@ -159,14 +172,13 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         sh.use();
-        mat4 model = mat4(1.0f);
-        model = rotate(model, (float)glfwGetTime(), vec3(0.5f, 1.0f, 0.0f));
-        mat4 view = mat4(1.0f);
-        view = translate(view, vec3(0.0f, 0.0f, -3.0f));
+     
+
         mat4 projection = mat4(1.0f);
         projection = perspective(radians(45.0f), (float)(SCR_WIDTH / SCR_HEIGHT), 0.1f, 100.0f);
 
-        sh.setMat4("model", model);
+        mat4 view = mat4(1.0f);
+        view = translate(view, vec3(0.0f,0.0f,-3.0f));
         sh.setMat4("view", view);
         sh.setMat4("projection", projection);
 
@@ -178,14 +190,17 @@ int main()
       
 
         mat4 trans = mat4(1.0f);
-        /*
-        trans = translate(trans, vec3(0.5f, 0, 0));
-        trans = rotate(trans, (float)glfwGetTime() * 0.1f, vec3(0, 0, 1.0f));
-        trans = scale(trans, vec3(0.5f, 0.5f, 0.5f));
-        unsigned int translateDoc = glGetUniformLocation(sh.ID, "transform");
-        glUniformMatrix4fv(translateDoc, 1, GL_FALSE, value_ptr(trans));*/
+        for (int i = 0; i < 10; i++)
+        {
+            mat4 model = mat4(1.0f);
+            model = translate(view, cubePositions[i]);
+            float angle = 20.f * i;
+            model = rotate(model, (float)radians(angle*glfwGetTime()), vec3(1.0f, 0.3f, 0.5f));
+            sh.setMat4("model", model);
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+        }
 
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+       
        // glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
        
         glBindVertexArray(0);
