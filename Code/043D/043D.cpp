@@ -18,7 +18,8 @@ const unsigned int SCR_HEIGHT = 600;
 vec3 cameraPos = vec3(0, 0, 3.0f);
 vec3 cameraFront = vec3(0, 0, -1.0f);
 vec3 cameraUp = vec3(0, 1.0f, 0);
-float cameraSpeed = 0.00025f;
+float cameraSpeed = 1.0f;
+float deltaTime = 0;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -32,19 +33,19 @@ void procInput(GLFWwindow* window)
     }
     else if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
     {
-        cameraPos += cameraSpeed * cameraFront;
+        cameraPos += cameraSpeed * cameraFront*deltaTime;
     }
     else if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
     {
-        cameraPos -= cameraSpeed * cameraFront;
+        cameraPos -= cameraSpeed * cameraFront * deltaTime;
     }
     else if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
     {
-        cameraPos -= glm::normalize(cross(cameraUp, (cameraPos - cameraFront))) * cameraSpeed;
+        cameraPos -= glm::normalize(cross(cameraUp, (cameraPos - cameraFront))) * cameraSpeed * deltaTime;
     }
     else if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
     {
-        cameraPos += glm::normalize(cross(cameraUp, (cameraPos - cameraFront))) * cameraSpeed;
+        cameraPos += glm::normalize(cross(cameraUp, (cameraPos - cameraFront))) * cameraSpeed * deltaTime;
     }
 }
 int main()
@@ -182,6 +183,7 @@ int main()
           glm::vec3(1.5f,  0.2f, -1.5f),
           glm::vec3(-1.3f,  1.0f, -1.5f)
     };
+    float lastFrame = 0;
 
 
     while (!glfwWindowShouldClose(window))
@@ -230,6 +232,15 @@ int main()
         glBindVertexArray(0);
         glfwSwapBuffers(window);
         glfwPollEvents();
+
+        float currentTime = glfwGetTime();
+        deltaTime = currentTime - lastFrame;
+        lastFrame = currentTime;
+        if (deltaTime != 0)
+        {
+            cout << "FPS is " <<  deltaTime << endl;
+        }
+        
     }
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
