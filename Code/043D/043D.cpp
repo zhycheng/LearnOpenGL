@@ -15,6 +15,10 @@ using namespace glm;
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
+vec3 cameraPos = vec3(0, 0, 3.0f);
+vec3 cameraFront = vec3(0, 0, -1.0f);
+vec3 cameraUp = vec3(0, 1.0f, 0);
+float cameraSpeed = 0.00025f;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -25,6 +29,22 @@ void procInput(GLFWwindow* window)
     if (glfwGetKey(window, GLFW_KEY_C) == GLFW_PRESS)
     {
         glfwSetWindowShouldClose(window, true);
+    }
+    else if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+    {
+        cameraPos += cameraSpeed * cameraFront;
+    }
+    else if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+    {
+        cameraPos -= cameraSpeed * cameraFront;
+    }
+    else if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+    {
+        cameraPos -= glm::normalize(cross(cameraUp, (cameraPos - cameraFront))) * cameraSpeed;
+    }
+    else if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+    {
+        cameraPos += glm::normalize(cross(cameraUp, (cameraPos - cameraFront))) * cameraSpeed;
     }
 }
 int main()
@@ -163,6 +183,7 @@ int main()
           glm::vec3(-1.3f,  1.0f, -1.5f)
     };
 
+
     while (!glfwWindowShouldClose(window))
     {
         procInput(window);
@@ -173,7 +194,6 @@ int main()
 
         sh.use();
      
-
         mat4 projection = mat4(1.0f);
         projection = perspective(radians(45.0f), (float)(SCR_WIDTH / SCR_HEIGHT), 0.1f, 100.0f);
         mat4 view = mat4(1.0f);
@@ -181,7 +201,7 @@ int main()
         float x = sin(glfwGetTime()) * R;
         float z = cos(glfwGetTime()) * R;
 
-        view = glm::lookAt(vec3(x, 0, z), vec3(0, 0, 0), vec3(0, 1.0f, 0));
+        view = glm::lookAt(cameraPos, cameraPos+cameraFront, cameraUp);
         //view = translate(view, vec3(0.0f,0.0f,-3.0f));
         sh.setMat4("view", view);
         sh.setMat4("projection", projection);
